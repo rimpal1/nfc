@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "835d0e2b-49ac-443f-92f5-fdc087daf874",
+		"name": "nfc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "authorization",
+			"item": [
+				{
+					"name": "registerCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"rimpalsuthar23432@hotmail.com\",\n\t\"firstName\":\"rimpal\",\n\t\"lastName\": \"suthar\",\n\t\"password\": \"5353\",\n\t\"phone\": \"234344342\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/auth/registerCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"auth",
+								"registerCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerVendor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyName\": \"MS Groccery\",\n\t\"email\":\"msgoods@gmail.com\",\n\t\"firstName\":\"Methew\",\n\t\"lastName\": \"Suvaz\",\n\t\"password\": \"1212\",\n\t\"phone\": \"350924342\",\n\t\"role\": \"vendor\",\n\t\"fullfilmentRate\": 9.00,\n\t\"warehouseId\": 1,\n\t\"addressType\": \"B\",\n\t\"addressLine1\": \"20 org st\",\n\t\"city\": \"Milltown\",\n\t\"state\": \"NJ\",\n\t\"zipcode\": \"80902\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/auth/registerVendor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"auth",
+								"registerVendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerWarehouse",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"admi1@nfc.com\",\n\t\"password\": \"111\",\n\t\"phone\": \"234344342\",\n\t\"role\": \"admin\",\n\t\"remainingStorage\": 1000,\n\t\"totalStorage\": 1000,\n\t\"totalShelves\": 100,\n\t\"slug\": \"Admin, Newark\",\n\t\"addressType\": \"B\",\n\t\"addressLine1\": \"40 Main st\",\n\t\"city\": \"Newark\",\n\t\"state\": \"NJ\",\n\t\"zipcode\": \"90823\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/auth/registerWarehouse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"auth",
+								"registerWarehouse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"admi1@nfc.com\",\n\t\"password\":\"111\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "createBulkProducts",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzk2MDI4MywiZXhwIjoxNjA3OTY1NjgzfQ.YGlJV44qClqQEV5M8GUzcXf87wwRCcqBeFBiHSlwYgY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n   {\n      \"category\": \"accessories\",\n      \"productName\": \"Phone Tripod\",\n      \"description\": \"The compact flexible legs can easily wrap around bicycles, poles and branches, or you can grab it as a selfie stick. Weighing only 150g and standing at 10in, this tripod is definite the most portable and compact tripod, applicable to kinds of indoor & outdoor activities.\",\n      \"price\": 16.99,\n      \"color\": \"Black\",\n      \"inStock\": \"50\",\n      \"imageUrl\": \"https://images-na.ssl-images-amazon.com/images/I/61Y1wZCbIiL._AC_SL1000_.jpg\",\n      \"vendorId\": 1\n   },\n   {\n      \"category\": \"health\",\n      \"productName\": \"Face Shields Set with 12 Replaceable Anti Fog Shields\",\n      \"description\": \"Professional Protection: Reusable Safety Face Shields, Large area from the eyebrows to the chin to protect against foreign aggression, Full Facial Protection from droplets, saliva, splash, oil and dust.\",\n      \"price\": 14.99,\n      \"color\": \"Transparent\",\n      \"inStock\": \"100\",\n      \"imageUrl\": \"https://images-na.ssl-images-amazon.com/images/I/618i-RJ5TNL._AC_SL1500_.jpg\",\n      \"vendorId\": 1\n   },\n   {\n      \"category\": \"accessories\",\n      \"productName\": \"Cell Phone Stand\",\n      \"description\": \"This cell phone stand is compatible with all 4-8 inches smartphones in phone cases, like iPhone 12 mini 11 Pro XS Max XR x 6 6S 7 8 Plus, Galaxy S10+ S10e S10 S9+ S9 S8+ S8 S7 Note 10 9 8, LG, Sony, Moto, LG, Google Pixel, Nexus etc.\",\n      \"price\": 9.99,\n      \"color\": \"Black\",\n      \"inStock\": \"20\",\n      \"imageUrl\": \"https://images-na.ssl-images-amazon.com/images/I/61oHZRuOw5L._AC_SL1279_.jpg\",\n      \"vendorId\": 1\n   }\n]\n"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/product/insertBulk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"product",
+								"insertBulk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProductRating",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzkyMTY2NiwiZXhwIjoxNjA3OTI3MDY2fQ.GR40ZOZ-1f-CbphEEZQyy_0ovteK5Bswr16LPV9kJJk"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\": 3,\n    \"rating\": 3.5,\n    \"description\": \"Excellent stand and super happy with the purchase.\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/product/addRating",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"product",
+								"addRating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzk2MDI4MywiZXhwIjoxNjA3OTY1NjgzfQ.YGlJV44qClqQEV5M8GUzcXf87wwRCcqBeFBiHSlwYgY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5005/api/product/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"product",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzg5NzA3MCwiZXhwIjoxNjA3OTAyNDcwfQ.k8U41lUds-67u6jJLaMvBSJ8eNblRZk6ioMIqUf0tqU"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"productId\":\"1\",\n\t\"price\": 5.99,\n\t\"inStock\": 30\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/product/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"product",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update product Count",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzk2MDI4MywiZXhwIjoxNjA3OTY1NjgzfQ.YGlJV44qClqQEV5M8GUzcXf87wwRCcqBeFBiHSlwYgY"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"productId\": 1,\n        \"quantity\": 10\n    },\n    {\n        \"productId\": 2,\n        \"quantity\": 3\n    }\n]"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/product/updateProductCount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"product",
+								"updateProductCount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzk2MDI4MywiZXhwIjoxNjA3OTY1NjgzfQ.YGlJV44qClqQEV5M8GUzcXf87wwRCcqBeFBiHSlwYgY",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"totalCost\": 89.25,\n    \"customerId\": 1,\n    \"products\": [\n        {\n            \"quantity\": 5,\n            \"productId\": 2\n        },\n        {\n            \"quantity\": 2,\n            \"productId\": 3\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5005/api/order/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzk2MDI4MywiZXhwIjoxNjA3OTY1NjgzfQ.YGlJV44qClqQEV5M8GUzcXf87wwRCcqBeFBiHSlwYgY"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5005/api/order/getAllOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"order",
+								"getAllOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "vendor",
+			"item": [
+				{
+					"name": "Get all products by vendorId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzk2MDI4MywiZXhwIjoxNjA3OTY1NjgzfQ.YGlJV44qClqQEV5M8GUzcXf87wwRCcqBeFBiHSlwYgY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5005/api/vendor/getAllProductsByVendorId/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"vendor",
+								"getAllProductsByVendorId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get monthly invoices by vendorId",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dpbklkIjoxLCJlbWFpbCI6ImFkbWkxQG5mYy5jb20iLCJmaXJzdE5hbWUiOm51bGwsImxhc3ROYW1lIjpudWxsLCJyb2xlIjoiYWRtaW4iLCJjdXN0b21lcklkIjpudWxsLCJ3YXJlaG91c2VJZCI6MSwidmVuZG9ySWQiOm51bGwsImlhdCI6MTYwNzk3MzE3MSwiZXhwIjoxNjA3OTc4NTcxfQ.uOBn53Zjg_bSB9nppVhwa0CV5X7Qd47WP0FAZq9zagM"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5005/api/vendor/getAllProductsByVendorId/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5005",
+							"path": [
+								"api",
+								"vendor",
+								"getAllProductsByVendorId",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

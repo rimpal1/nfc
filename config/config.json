@@ -1,0 +1,31 @@
+{
+   "local": {
+      "username": "b8cbe41b4cf598",
+      "password": "6f1a6542",
+      "database": "heroku_f12f26a84dcd7ce",
+      "host": "us-cdbr-east-02.cleardb.com",
+      "dialect": "mysql"
+   },
+   "local2": {
+      "username": "root",
+      "password": "password",
+      "database": "nfc",
+      "host": "127.0.0.1",
+      "port": 3600,
+      "dialect": "mysql"
+   },
+   "test": {
+      "username": "root",
+      "password": null,
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+   },
+   "production": {
+      "username": "b8cbe41b4cf598",
+      "password": "6f1a6542",
+      "database": "heroku_f12f26a84dcd7ce",
+      "host": "us-cdbr-east-02.cleardb.com",
+      "dialect": "mysql"
+   }
+}

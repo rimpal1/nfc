@@ -1,0 +1,83 @@
+{
+   "name": "nfc",
+   "version": "0.1.0",
+   "private": true,
+   "dependencies": {
+      "@material-ui/core": "^4.11.2",
+      "@material-ui/icons": "^4.11.2",
+      "@material-ui/lab": "^4.0.0-alpha.57",
+      "@material-ui/pickers": "^3.2.10",
+      "@material-ui/styles": "^4.11.2",
+      "@testing-library/jest-dom": "^5.11.6",
+      "@testing-library/react": "^11.2.2",
+      "@testing-library/user-event": "^12.5.0",
+      "axios": "^0.21.0",
+      "bcrypt": "^5.0.0",
+      "concurrently": "^5.3.0",
+      "date-fns": "^2.16.1",
+      "express": "^4.17.1",
+      "express-jwt": "^6.0.0",
+      "formik": "^2.2.5",
+      "fs": "0.0.1-security",
+      "history": "^5.0.0",
+      "jsonwebtoken": "^8.5.1",
+      "material-table": "^1.69.2",
+      "moment": "^2.29.1",
+      "mysql2": "^2.2.5",
+      "nanoid": "^3.1.20",
+      "path": "^0.12.7",
+      "qs": "^6.9.4",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1",
+      "react-feather": "^2.0.9",
+      "react-number-format": "^4.4.1",
+      "react-perfect-scrollbar": "^1.5.8",
+      "react-query": "^3.2.0",
+      "react-router": "^6.0.0-beta.0",
+      "react-router-dom": "^6.0.0-beta.0",
+      "react-scripts": "4.0.1",
+      "sequelize": "^6.3.5",
+      "web-vitals": "^0.2.4",
+      "yup": "^0.32.6"
+   },
+   "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "server": "export NODE_ENV=local && export PORT=5005 && nodemon server.js",
+      "start-dev": "concurrently \"npm run server\" \"npm start\"",
+      "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
+   },
+   "eslintConfig": {
+      "extends": [
+         "react-app",
+         "react-app/jest"
+      ]
+   },
+   "browserslist": {
+      "production": [
+         ">0.2%",
+         "not dead",
+         "not op_mini all"
+      ],
+      "development": [
+         "last 1 chrome version",
+         "last 1 firefox version",
+         "last 1 safari version"
+      ]
+   },
+   "devDependencies": {
+      "faker": "^5.1.0",
+      "nodemon": "^2.0.6"
+   },
+   "nodemonConfig": {
+      "watch": [
+         "routes/*",
+         "server.js",
+         "models/*"
+      ],
+      "delay": "2000ms"
+   },
+   "proxy": "http://localhost:5005"
+}

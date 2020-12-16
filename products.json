@@ -1,0 +1,33 @@
+[
+   {
+      "category": "accessories",
+      "productName": "Phone Tripod",
+      "description": "The compact flexible legs can easily wrap around bicycles, poles and branches, or you can grab it as a selfie stick. Weighing only 150g and standing at 10in, this tripod is definite the most portable and compact tripod, applicable to kinds of indoor & outdoor activities.",
+
+      "price": 16.99,
+      "color": "Black",
+      "inStock": "50",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61Y1wZCbIiL._AC_SL1000_.jpg",
+      "vendorId": 1
+   },
+   {
+      "category": "health",
+      "productName": "Face Shields Set with 12 Replaceable Anti Fog Shields",
+      "description": "Professional Protection: Reusable Safety Face Shields, Large area from the eyebrows to the chin to protect against foreign aggression, Full Facial Protection from droplets, saliva, splash, oil and dust.",
+      "price": 14.99,
+      "color": "Transparent",
+      "inStock": "100",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/618i-RJ5TNL._AC_SL1500_.jpg",
+      "vendorId": 1
+   },
+   {
+      "category": "accessories",
+      "productName": "Cell Phone Stand",
+      "description": "This cell phone stand is compatible with all 4-8 inches smartphones in phone cases, like iPhone 12 mini 11 Pro XS Max XR x 6 6S 7 8 Plus, Galaxy S10+ S10e S10 S9+ S9 S8+ S8 S7 Note 10 9 8, LG, Sony, Moto, LG, Google Pixel, Nexus etc.",
+      "price": 9.99,
+      "color": "Black",
+      "inStock": "20",
+      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61oHZRuOw5L._AC_SL1279_.jpg",
+      "vendorId": 1
+   }
+]
