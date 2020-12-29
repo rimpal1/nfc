@@ -1,6 +1,6 @@
 # NFC - Newark Fullfilment Center
 
 - Webpages
-- [ ] Customer Portal
+- [x] Customer Portal
 - [ ] Admin Page
 - [ ] Vendor Page
